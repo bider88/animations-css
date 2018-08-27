@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,70 +11,24 @@
         body {
             font-family: 'Montserrat', sans-serif;
         }
-
-        .ball {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            /* transition-property: width, height; */
-            /* transition-duration: 1s; */
-            /* transition-delay: 1s; */
-            /* transition-timing-function: ease; */
-            transition: 1s;
-            position: absolute;
-            display: flex;
-            align-items: center; /* Alineado vertical */
-            justify-content: center; /* Alineado horizontal */
-            color: white;
+        ul li {
+            list-style: none;
         }
-        /* .ball:hover {
-            width: 200px;
-            height: 200px;
-        } */
-        .ball.a {
-            background-color: chocolate;
-            left: 0;
-        }
-        .ball.b {
-            background-color: #9C27B0;
-            right: 0;
-        }
-        .basket {
-            border: 1px solid red;
-            position: relative;
-            height: 100px;
-        }
-        .basket:hover .ball.a{
-            /* left: 50%; */
-            left: calc(50% - 100px);
-        }
-        .basket:hover .ball.b {
-            /* right: 50%; */
-            right: calc(50% - 100px);
+        a {
+            text-decoration: none;
+            color: #0069D9;
         }
     </style>
 </head>
+
 <body>
-    <h2>Transiciones CSS</h2>
-    <div class="basket">
-        <div class="ball a">Hola</div>
-        <div class="ball b">Mundo</div>
-    </div>
-    <br>
-    <hr>
-    <br>
+    <h2>Animaciones CSS</h2>
     <ul>
         <li>
-            <b>transition-property:</b> Indicamos que propiedad va a cambiar. 
+            <a href="transitions.html">Transiciones</a>
         </li>
         <li>
-            <b>transition-duration:</b> El tiempo en el que hará la transición. 
+            <a href="transforms.html">Transformaciones</a>
         </li>
-        <li>
-            <b>transition-delay:</b> Indicamos un retraso a la transición. 
-        </li>
-        <li>
-            <b>transition-timing-function:</b> Propiedad de aceleración, es el tiempo de respuesta y reacción de una manera más suave. Por defecto viene <em>easy</em>.
-        </li>
-        <li>
-            <b>transition: <span style="color: #E91E63">width 1s 1s ease;</span>:</b> En un sola línea podemos especificar el <em>transition-property</em>, <em>transition-duration</em>, <em>transition-delay</em> y  <em>transition-timing-function</em>
+    </ul>
+</body>

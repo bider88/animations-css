@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Transiciones CSS</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* transition-property: width, height; */
+            /* transition-duration: 1s; */
+            /* transition-delay: 1s; */
+            /* transition-timing-function: ease; */
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            /* Alineado vertical */
+            justify-content: center;
+            /* Alineado horizontal */
+            color: white;
+        }
+
+        /* .ball:hover {
+            width: 200px;
+            height: 200px;
+        } */
+        .ball.a {
+            background-color: chocolate;
+            left: 0;
+        }
+
+        .ball.b {
+            background-color: #9C27B0;
+            right: 0;
+        }
+
+        .basket {
+            border: 1px solid red;
+            position: relative;
+            height: 100px;
+            /* transform: rotar | sesgar | posición | tamaño */
+            transform: rotate(5deg) skew(10deg) translate(100px) scale(1.5);
+        }
+
+        .basket:hover .ball.a {
+            /* left: 50%; */
+            left: calc(50% - 100px);
+        }
+
+        .basket:hover .ball.b {
+            /* right: 50%; */
+            right: calc(50% - 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Transiciones CSS</h2>
+    <div class="basket">
+        <div class="ball a">Hola</div>
+        <div class="ball b">Mundo</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <ul>
+        <li>
+            <b>transform: rotar | sesgar | posición | tamaño :</b> Tranforma el elemento y recibe como propiedades los siguientes valores, <em>rotate</em>, <em>skew</em>, <em>translate</em> y <em>scale</em>.
+        </li>
+    </ul>
+</body>
