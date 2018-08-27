@@ -21,6 +21,10 @@
             /* transition-timing-function: ease; */
             transition: 1s;
             position: absolute;
+            display: flex;
+            align-items: center; /* Alineado vertical */
+            justify-content: center; /* Alineado horizontal */
+            color: white;
         }
         /* .ball:hover {
             width: 200px;
@@ -37,19 +41,23 @@
         .basket {
             border: 1px solid red;
             position: relative;
-            height: 200px;
+            height: 100px;
         }
-        .basket:hover .ball {
-            width: 200px;
-            height: 200px;
+        .basket:hover .ball.a{
+            /* left: 50%; */
+            left: calc(50% - 100px);
+        }
+        .basket:hover .ball.b {
+            /* right: 50%; */
+            right: calc(50% - 100px);
         }
     </style>
 </head>
 <body>
     <h2>Transiciones CSS</h2>
     <div class="basket">
-        <div class="ball a"></div>
-        <div class="ball b"></div>
+        <div class="ball a">Hola</div>
+        <div class="ball b">Mundo</div>
     </div>
     <br>
     <hr>
