@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Animaciones (sintaxis) - Animación CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/gif;base64,R0lGODlhEAAQAPEAAAAAACf/AAAAAAAAACH5BAlkAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAIQAAAAAAAAAAAAAQBAAAAAAAAAAAAAAABAEAAAAAAAAAAAAACAQAAAAAAAAAAAAAABAIAAAAAKBQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJHgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAIQAAAAAAAAAAAAAQBAAAAAAAAAAAAAAABAEAAAAAAAAAAAAACAQAAAAAAAAAAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" type="image/x-icon">
+    <style>
+        
+        .container {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        .sub-container {
+            border: 1px solid red;
+            width: 100%;
+        }
+        .sub-container .circle:hover {
+            animation-play-state: paused;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: #9C27B0;
+            color: white;
+            margin: 20px;
+            border-radius: 50%;
+            transition: .3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            animation-name: circle;
+            animation-duration: 2s;
+            /* animation-delay: 1s; */
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            position: relative;
+        }
+
+        @keyframes circle {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: calc(100% - 240px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <span class="brand">
+            <a href="index.html">Animaciones CSS</a>
+        </span>
+    </nav>
+    <div class="container-fluid">
+        <h2>Animaciones (sintaxis)</h2>
+        <div class="container">
+            <div class="sub-container">
+                <div class="circle">
+                    Hola mundo
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <ul>
+            <li>
+                <b>animation-name:</b> Siempre recibe el <em>nombre</em> de la animación.
+            </li>
+            <li>
+                <b>@keyframes <span style="color: #E91E63">squarre</span> { } :</b> Es la animación en la que <em>squarre</em> es el mnombre de la animación  y entre llaves escribir la animación, para indicar la animación en la duración indicada se colocan los porcentajes (tiempo relativo a la duración) y dentro colocamos alguna propiedad de css entre llaves.
+            </li>
+            <li>
+                <b>animation-iteration-count: <span style="color: #E91E63">2</span> ; :</b> Inidicamos las veces que se repita la animación.
+            </li>
+            <li>
+                <b>animation-timing-function: <span style="color: #E91E63">easy</span> ; :</b> Inidicamos como queremos el suavizado de la animación, por defecto esta en <em>easy</em>, pero tenemos otras como <em>easy-in</em>, <em>easy-out</em>, <em>easy-in-out</em> y <em>linear</em> (esta última indica que no haya nigún tipo de suavizado).
+            </li>
+            <li>
+                <b>animation-timing-function: <span style="color: #E91E63">cubic-bezier(1, 1, 1, 1)</span> ; :</b> Le estaríamos indicando que nuestra animación sea <em>linear</em>.
+            </li>
+            <li>
+                <b>animation-direction: <span style="color: #E91E63">reverse</span> ; :</b> Le indicamos que empiece en la animación de 100% a 0%. también tenemos el valor <em>alternate</em> y lo que su nombre lo dice, iría con una animación alternada.
+            </li>
+            <li>
+                <b>animation-fill-mode: <span style="color: #E91E63">forwards</span> ; :</b> Indicamos como va a ser el relleno de mi animación. Con <em>formards</em> se queda con los valores finales de la animación.
+            </li>
+            <li>
+                <b>animation-play-state: <span style="color: #E91E63">running</span> ; :</b> Verificamos como está el estado de la animación. Por defecto viene con el valor de <em>running</em> pero tenemos también el valor de <em>paused</em>.
+            </li>
+        </ul>
+    </div>
+</body>
